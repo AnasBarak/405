@@ -1,16 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="pageStyle.css">                        
         <title>Submit news</title>        
     </head>
     <body>
-        <form>
-            <h1>Submit</h1>
-            Title: <input type="text" name="fname"><br><br>
-            URL: <input type="text" name="fname"><br><br>
-            <h2>or</h2><br>
-            Text: <textarea rows="4" cols="50"></textarea><br><br>
-            <input type="submit" value="Submit">            
-        </form>
+        <div class="centerPage">            
+            <form class="formIn">
+                <div class="formIn">
+                    <h1>Submit</h1>
+                    <label>Title: </label>
+                </div>
+                <div>
+                    <input type="text" name="title">
+                </div>
+                    <label> URL:</label>
+                <div>
+                   <input type="text" name="url">
+                </div>
+                <div class="formIn">                        
+                    <h3>or</h3>
+                </div>
+                <div>
+                    <label>Text:</label>
+                </div>
+                <div>
+                    <textarea rows="4" cols="50"></textarea>
+                </div>
+                <div>
+                    <button type="button" class="sub">Submit</button>  
+                </div>  
+            </form>
+        </div>
+
+        <script>
+            var title = document.querySelector("input[name=title]");
+            var url = document.querySelector("input[name=url]");
+            var text = document.querySelector("textarea");
+            var sub = document.querySelector("button.sub");
+            var cpage = document.querySelector("div.centerPage");
+            
+            var warning = document.createElement("div");
+            warning.style = 'visibility: hidden;width = 100%; background-color: red; color: white;';    
+
+            var post1 = document.createElement("p");
+            var titleWarn = document.createTextNode("Title must be filled  out!");
+            post1.style = "visibility: hidden; padding-top: 10px;";
+            post1.appendChild(titleWarn);
+            var post2 = document.createElement("p");
+            var textWarn = document.createTextNode("Either the URL or text field must be filled out!");
+            post2.style = "visibility: hidden; padding-bottom: 10px;";
+            post2.appendChild(textWarn);
+
+            warning.appendChild(post1);
+            warning.appendChild(post2);
+            cpage.appendChild(warning);
+
+          
+            sub.addEventListener("click", function(){
+                warning.style.visibility = "hidden";
+                post1.style.visibility = "hidden";
+                post2.style.visibility = "hidden";
+                if(title.value == "" && url.value == "" && text.value == ""){
+                    warning.style.visibility = "visible";
+                    post1.style.visibility = "visible";
+                    post2.style.visibility = "visible";
+                    return;
+                }
+                if(url.value == "" && text.value == ""){
+                    warning.style.visibility = "visible";
+                    post2.style.visibility = "visible";
+                    return;
+                }
+            })
+        </script>
     </body>
 </html>

@@ -1,0 +1,84 @@
+#mainSec{
+  background-color:#F6F6EF;
+  margin: 1% 5%
+}
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F07430;
+    font-family:"Segoe UI";
+}
+
+a{
+  text-decoration: none;
+}
+header li {
+  float: left;
+}
+
+header a:hover:not(#home) {
+    background-color: #F6F6EF;
+    color: #000000;
+}
+
+
+#home{
+  background-color: #808080; 
+}
+
+header li a {
+  font-size: 23px;  
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+#mainTime{
+  padding-left: 1%;
+  font-size: 15px;
+  border-top: solid;
+  border-bottom: solid;
+  border-color: #E8E9EA;
+}
+
+time{
+  padding-left: 1%;
+  color:#808080;
+}
+
+
+li.post{
+  font-size: 20px;
+  font-family:"Segoe UI";
+  border-bottom: solid;
+  border-color: #808080;
+  margin: 1.1% 1% ;
+  padding-bottom: 1.1%;
+  list-style-image: url('https://i.imgur.com/xZEzw3o.png');  
+}
+
+li.post a, footer a{
+  color: black;
+  text-decoration: none;
+}
+
+ul.sub{
+  list-style: none;
+}
+
+footer{
+  border-top: solid;
+  border-top-width: 2px;
+  border-color: #a8a8a8;
+  padding-bottom: 0.5%;
+  margin: auto;  
+  text-align: center;
+}
+
+footer a{
+  font-weight: bold;
+}
+

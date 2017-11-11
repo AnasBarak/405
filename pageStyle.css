@@ -1,0 +1,76 @@
+body{
+    background-color: #F1F2F1;
+    font-family:"Segoe UI";    
+}
+
+.centerPage{
+    background-color: #FFFFFF;
+    margin: auto;
+    padding: 2.5%;
+    max-width: 50%;    
+}
+
+h1.headline{
+    color: #387A2D;
+}
+
+div.codes{
+    background-color: #2d2d2d;
+    padding: 1%
+}
+
+p{
+    font-size: 16px;
+}
+
+code{
+    color:  #F1F2F1;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 5px;
+}
+
+th {
+    background-color: #616161;
+    color: white;
+}
+
+tr:nth-child(odd){
+    background-color: #f2f2f2
+}
+
+div.formIn{
+    display: inline-block;
+}
+
+button.sub{
+    margin-top: 10px;
+    margin-bottom: 10px;    
+    background-color: #52AF50;
+    color: #FFFFFF;    
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+label{
+    font-size: 20px;
+}
+textarea, input[type=text]{
+    width: 100%;
+    resize: none;    
+    padding: 5px 10px;     
+    font-size: 20px;    
+}
+
+textarea:focus , input[type=text]:focus{
+    background-color: #9A9CB6;
+    color: white;
+}

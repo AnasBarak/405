@@ -1,97 +1,102 @@
 <!DOCTYPE html>
 <html>
     <head>
+		<link rel="stylesheet" type="text/css" href="mainStyle.css">
         <title>TechNews</title>        
     </head>
     <body>
+        <div id="mainSec">
+          
         <header>
-            <a href="#">TechNews</a>
-            | <time>10/9/2017</time>
-            | <a href="#">New</a>
-            | <a href="#">Comments</a>
-            | <a href="#">Show</a>
-            | <a href="#">Ask</a>
-            | <a href="#">Jobs</a>
-            | <a href="./submit.html" target="_blank">Submit News</a>
+          <ul>
+              <li ><a href="#" id="home"><img src="./Images/home.png" width=20 hight= 20 alt=""> TechNews</a></li>
+              <li><a href="#" >News</a></li>
+              <li><a href="#">Comments</a></li>
+              <li><a href="#">Show</a></li>
+              <li><a href="#">Ask</a></li>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="./submit.html" target="_blank">Submit News</a></li>
+          </ul>
         </header>
-        <h1>Main Stories</h1>
-        <ul>
-            <li>
+          
+        <h1 id="mainTime">Main Stories <time>10/18/2017</time></h1>
+          
+        <ul class="newsPost">
+            <li class="post">
                 <a href="#">Report: Russian Hackers Penetrated Elite NSA Hacking Division</a>
-                <ul>
+                <ul class="sub">
                     <li>3 min ago | 0 comments</li>
                 </ul>
             </li>
-            <li>
+            <li class="post">
                 <a href="#">All-touchscreen BlackBerry Motion officially announced</a>
-                <ul>
+                <ul class="sub">
                     <li>1 hour ago | 41 comments</li>
                 </ul>
             </li>
-            <li>
+            <li  class="post">
                 <a href="#">Google Announces the Pixel 2 and Pixel 2 XL</a>
-                <ul>
+                <ul class="sub">
                     <li>3 hours ago | 95 comments</li>
                 </ul>
             </li>
-            <li>
+            <li class="post">
                 <a href="#">WhatsApp Business' to be introduced as standalone app</a>
-                <ul>
+                <ul class="sub">
                     <li>1 day ago | 19 comments</li>
                 </ul>
             </li>
-            <li>
+            <li class="post">
                 <a href="#">Project Loon balloons from Google's Alphabet to aid Puerto Rico</a>
-                <ul>
+                <ul class="sub">
                     <li>2 days ago | 9 comments</li>
                 </ul>
             </li>
-            <li>
+            <li class="post">
                 <a href="#">With the Shell, You Can Go Wild(card) and Follow Your Pipe Dreamd</a>
-                <ul>
+                <ul class="sub">
                     <li>3 days ago | 11 comments</li>
                 </ul>
             </li>
-            <li>
+            <li class="post">
                 <a href="#">Roku Introduced Five New Streaming Media Players</a>
-                <ul>
+                <ul class="sub">
                     <li>3 days ago | 20 comments</li>
                 </ul>
             </li>
-            <li>
+            <li class="post">
                 <a href="./nodejs.html" target="_blank">Getting Started with Node.js</a>
-                <ul>
+                <ul class="sub">
                     <li>5 days ago | 27 comments</li>
                 </ul>
             </li>
-            <li>
+            <li class="post">
                 <a href="#">AWS S3 Open-source Alternative Written in Go</a>
-                <ul>
+                <ul class="sub">
                     <li>6 days ago | 41 comments</li>
                 </ul>
             </li>
-            <li>
+            <li class="post">
                 <a href="#">TensorFlow: Open-source Libary for Machine Intelligence</a>
-                <ul>
+                <ul class="sub">
                     <li>6 days ago | 39 comments</li>
                 </ul>
             </li>
-            <li>
+            <li class="post">
                 <a href="#">Build Go Programs that Run Directly on the Xen Hypervisor</a>
-                <ul>
+                <ul class="sub">
                     <li>1 week ago | 33 comments</li>
                 </ul>
             </li>
-            <li>
+            <li class="post">
                 <a href="#">Machine Learning Cheat Sheet</a>
-                <ul>
+                <ul class="sub">
                     <li>1 week ago | 25 comments</li>
                 </ul>
             </li>
         </ul>
         <footer>
-            <hr>
-            <div align="center">
+            <div>
                 <p>&copy; 2017 HN inc. All Rights Reserved.</p>
                 <a href="#">Privacy</a>
                 | <a href="#">Terms of Use</a>
@@ -100,5 +105,7 @@
                 
             </div>
         </footer>
+                </div>
+
     </body>
 </html>
