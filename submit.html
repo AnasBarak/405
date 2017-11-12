@@ -67,6 +67,11 @@
                     post2.style.visibility = "visible";
                     return;
                 }
+                if(title.value == "" ){
+                    warning.style.visibility = "visible";
+                    post1.style.visibility = "visible";
+                    return;
+                }
                 if(url.value == "" && text.value == ""){
                     warning.style.visibility = "visible";
                     post2.style.visibility = "visible";

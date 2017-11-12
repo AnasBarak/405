@@ -6,7 +6,14 @@
     </head>
     <body>
         <div class="centerPage">
-            <h1 class="headline">Getting Started with Node.js</h1>
+            <div id=title>
+                <div id="voting">
+                    <button id="upVote">&#x25b2;</button>
+                    <p id="voteNum">123</p>
+                    <button id="downVote">&#x25bc;</button>
+                </div>
+                <h1 class="headline">Getting Started with Node.js</h1>
+            </div>
             <h2>Installation:</h2>
             <div>
                 <h3>Windows</h3>
@@ -59,5 +66,54 @@
                 </table>
             </div>
         </div>
+        <script>
+            var voteUp = document.getElementById("upVote");
+            var voteDown = document.getElementById("downVote");
+            var voteNum = document.getElementById("voteNum");
+            var clicked = "none";
+            voteUp.addEventListener("click", function(){
+                if(clicked == "none"){
+                    voteUp.style.color = "red";
+                    voteNum.style.color = "red";
+                    voteNum.innerText = (parseInt(voteNum.innerText)+1);
+                    clicked = "up";
+                }else if(clicked == "down"){
+                    voteUp.style.color = "red"
+                    voteDown.style.color = "black"
+                    voteNum.style.color = "red";
+                    voteNum.innerText = (parseInt(voteNum.innerText)+2);
+                    clicked = "up";
+                }else{
+                    voteUp.style.color = "black";
+                    voteNum.style.color = "black";
+                    voteNum.innerText = (parseInt(voteNum.innerText)-1);
+                    clicked = "none";
+                }
+            })
+            voteDown.addEventListener("click", function(){
+                if(clicked == "none"){
+                    voteDown.style.color = "blue"
+                    voteNum.style.color = "blue";
+                    voteNum.innerText = (parseInt(voteNum.innerText)-1);
+                    clicked = "down";
+                }else if(clicked == "up"){
+                    voteUp.style.color = "black"
+                    voteDown.style.color = "blue"
+                    voteNum.style.color = "blue";
+                    voteNum.innerText = (parseInt(voteNum.innerText)-2);
+                    clicked = "down";
+                }else{
+                    voteDown.style.color = "black"
+                    voteNum.style.color = "black"
+                    voteNum.innerText = (parseInt(voteNum.innerText)+1);
+                    clicked = "none";
+                }
+            })
+
+
+
+
+        </script>
+
     </body>
 </html>

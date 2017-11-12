@@ -9,9 +9,32 @@ body{
     padding: 2.5%;
     max-width: 50%;    
 }
+#voting{
+    float: left;
+    width: 50px;
+    text-align: center;
+}
 
+#title{
+    height: 62px;
+}
+#upVote, #downVote{
+    background:none;
+    border:none;
+    margin:0;
+    padding: 0;
+}
+#voteNum{
+    width: 50px;
+    margin-top: 0px;        
+    margin-bottom: 0px;    
+}
 h1.headline{
     color: #387A2D;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin: 0px;
+    text-align: 
 }
 
 div.codes{

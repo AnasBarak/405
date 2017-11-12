@@ -37,18 +37,26 @@ header li a {
 }
 
 #mainTime{
-  padding-left: 1%;
-  font-size: 15px;
   border-top: solid;
   border-bottom: solid;
   border-color: #E8E9EA;
-}
+  margin-top: 5px;
+}  
 
+#mainTime h1{
+  display: inline;
+  padding-left: 1%;
+  padding-top: 0px;
+  font-size: 15px;
+}
+#mainTime label{
+  float: right;
+  margin-right: 15px;
+}
 time{
   padding-left: 1%;
   color:#808080;
 }
-
 
 li.post{
   font-size: 20px;
@@ -67,8 +75,12 @@ li.post a, footer a{
 
 ul.sub{
   list-style: none;
+  font-size: 17px;
 }
 
+ul.sub li{
+  display: inline;
+}
 footer{
   border-top: solid;
   border-top-width: 2px;
