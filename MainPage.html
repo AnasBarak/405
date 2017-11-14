@@ -19,88 +19,17 @@
           </ul>
         </header>
         <div id="mainTime">
-            <h1>Main Stories <time>11/13/2017</time></h1>
+            <h1>Main Stories <time>10/18/2017</time></h1>
             <label>Sort By
-                <select name="" id="Sort" onclick="sortBy(this.value)">
-                    <option value="new" selected>Newest</option>
-                    <option value="like">Like</option>
-                    <option value="com">Comment</option>                
+                <select name="" id="Sort">
+                    <option value="1" selected>Newest</option>
+                    <option value="2">Like</option>
+                    <option value="3">Comment</option>                
                 </select>
             </label>
         </div>        
         <ul class="newsPost">
-            <li class="post">
-                <a href="#">Report: Russian Hackers Penetrated Elite NSA Hacking Division</a>
-                <ul class="sub">
-                    <li>45 likes</li>
-                    <li>| Sun Nov 12 2017 21:52:10</li>
-                    <li>| 12 comments<li>
-                </ul>
-            </li>
-            <li class="post">
-                <a href="#">All-touchscreen BlackBerry Motion officially announced</a>
-                <ul class="sub">
-                    <li>70 likes</li>                        
-                    <li>| Sun Nov 12 2017 20:40:26</li>
-                    <li>| 41 comments<li>
-                </ul>
-            </li>
-            <li  class="post">
-                <a href="#">Google Announces the Pixel 2 and Pixel 2 XL</a>
-                <ul class="sub">
-                    <li>174 likes</li>                        
-                    <li>| Sat Nov 11 2017 19:15:36</li>
-                    <li>| 95 comments<li>
-                </ul>
-            </li>
-            <li class="post">
-                <a href="#">WhatsApp Business' to be introduced as standalone app</a>
-                <ul class="sub">
-                    <li>43 likes</li>                        
-                    <li>| Sat Nov 11 2017 12:55:39</li>
-                    <li>| 19 comments<li>
-                </ul>
-            </li>
-            <li class="post">
-                <a href="#">Project Loon balloons from Google's Alphabet to aid Puerto Rico</a>
-                <ul class="sub">
-                    <li>65 likes</li>                        
-                    <li>| Sat Nov 11 2017 10:35:16</li>
-                    <li>| 9 comments<li>
-                </ul>
-            </li>
-            <li class="post">
-                <a href="#">With the Shell, You Can Go Wild(card) and Follow Your Pipe Dreamd</a>
-                <ul class="sub">
-                    <li>27 likes</li>                        
-                    <li>| Fri Nov 10 2017 16:25:46</li>
-                    <li>| 11 comments<li>
-                </ul>
-            </li>
-            <li class="post">
-                <a href="#">Roku Introduced Five New Streaming Media Players</a>
-                <ul class="sub">
-                    <li>51 likes</li>                        
-                    <li>| Thu Nov 9 2017 22:14:50</li>
-                    <li>| 20 comments<li>
-                </ul>
-            </li>
-            <li class="post">
-                <a href="./nodejs.html" target="_blank">Getting Started with Node.js</a>
-                <ul class="sub">
-                    <li>123 likes</li>                        
-                    <li>| Thu Nov 9 2017 18:25:46</li>
-                    <li>| 27 comments<li>
-                </ul>
-            </li>
-            <li class="post">
-                <a href="#">AWS S3 Open-source Alternative Written in Go</a>
-                <ul class="sub">
-                    <li>101 likes</li>                        
-                    <li>| Wed Nov 8 2017 13:30:56</li>
-                    <li>| 41 comments<li>
-                </ul>
-            </li>
+           
         </ul>
         <footer>
             <div>
@@ -113,40 +42,6 @@
             </div>
         </footer>
         </div>
-    <script>
-        var newsList = document.getElementsByClassName("newsPost");
-        var sortBy = function(sortValue){
-            var outerList, switching, innerList, shouldSwitch, i, comp1, comp2;
-            switching = true;
-            while (switching) {
-                switching = false;
-                outerList = newsList[0].getElementsByClassName("post");
-                for (i = 0; i < (outerList.length - 1); i++) {
-                    shouldSwitch = false;
-                    var post1 = outerList[i].getElementsByClassName("sub")[0].getElementsByTagName("li");
-                    var post2 = outerList[i+1].getElementsByClassName("sub")[0].getElementsByTagName("li");
-                    if(sortValue == "new"){
-                        comp1 = new Date(post1[1].innerHTML.substr(2));
-                        comp2 = new Date(post2[1].innerHTML.substr(2));
-                    }else if(sortValue == "like"){
-                        comp1 = parseInt(post1[0].innerHTML.replace(/\D/g,''));
-                        comp2 = parseInt(post2[0].innerHTML.replace(/\D/g,''));
-                    }else if(sortValue == "com"){
-                        comp1 = parseInt(post1[2].innerHTML.replace(/\D/g,''));
-                        comp2 = parseInt(post2[2].innerHTML.replace(/\D/g,''));
-                    }
-                    if (comp1 < comp2) {
-                        shouldSwitch= true;
-                        break;
-                    }   
-                }
-                if (shouldSwitch) {
-                    outerList[i].parentNode.insertBefore(outerList[i + 1], outerList[i]);
-                    switching = true;
-                }
-            }
-
-        }
-    </script>
+    <script src="mainScript.js"> </script>
     </body>
 </html>
