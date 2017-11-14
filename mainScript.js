@@ -34,7 +34,12 @@ var dispalyList = function(){
     }
 }
 
-document.getElementsByTagName("body")[0].onload = dispalyList();
+document.getElementsByTagName("body")[0].onload = function(){
+    var date = new Date();
+    var pageDate = document.getElementsByTagName("time")[0];
+    pageDate.innerText = (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear();
+    dispalyList();
+}
 document.getElementById("Sort").addEventListener("click", function(){
     if(this.value == "1"){
         newsPosts.sort(function(a,b){
