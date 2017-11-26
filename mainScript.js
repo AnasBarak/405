@@ -79,7 +79,7 @@ document.getElementsByTagName("body")[0].onload = function () {
 
 }
 
-var picked = 1;
+var picked = 2;
 document.getElementById("Sort").addEventListener("click", function () {
     if (this.value == "1" && picked != 1) {
         picked = 1;
