@@ -19,7 +19,7 @@
               <li><a href="#">Show</a></li>
               <li><a href="#">Ask</a></li>
               <li><a href="#">Jobs</a></li>
-              <li><a href="./submit.html" target="_blank">Submit News</a></li>
+              <li><a href="./submit.php" target="_blank">Submit News</a></li>
           </ul>
         </header>
         <div id="mainTime">
