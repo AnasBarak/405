@@ -13,7 +13,7 @@
     if ($response && $response->num_rows > 0) {
         while ($row = $response->fetch_array()) {
             echo "<li class='post'>";
-            echo "<a href=".$row["url"].">".$row["title"]."</a>";
+            echo "<a href=".$row["url"]."target = '_blank'>".$row["title"]."</a>";
             echo "<ul class='sub'>";
             echo "<li>Like ".$row["likes"]."</li>";
             echo "<li> | ".$row["date_posted"]."</li>";
