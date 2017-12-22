@@ -21,6 +21,7 @@ function post_news($title,$url)
             return;
         }
         // close the prepared statement
+        
         $insert_statement->close();
     } else {
         printf("Failed to insert into the database:Erro number: %d,  %s\n",
