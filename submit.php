@@ -5,8 +5,20 @@
         <title>Submit news</title>        
     </head>
     <body>
-        <div class="centerPage">            
-            <form class="formIn">
+        <?php 
+            require_once('DB_Connection.php');
+            require('DB_Insert.php');
+            
+            if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                if(isset($_POST['sub_button'])) {
+                    $title = $_POST["title"];
+                    $url = $_POST["url"];
+                    post_news($title,$url);
+                }
+            }
+        ?>
+            <div class="centerPage">            
+            <form class="formIn" method="post" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
                 <div class="formIn">
                     <h1>Submit</h1>
                     <label>Title: </label>
@@ -25,10 +37,10 @@
                     <label>Text:</label>
                 </div>
                 <div>
-                    <textarea rows="4" cols="50"></textarea>
+                    <textarea rows="4" cols="50" name="text"></textarea>
                 </div>
                 <div>
-                    <button type="button" class="sub">Submit</button>  
+                    <button type="button" class="sub" name="sub_button">Submit</button>  
                 </div>  
             </form>
         </div>
@@ -65,18 +77,19 @@
                     warning.style.visibility = "visible";
                     post1.style.visibility = "visible";
                     post2.style.visibility = "visible";
-                    return;
+                    return false;
                 }
                 if(title.value == "" ){
                     warning.style.visibility = "visible";
                     post1.style.visibility = "visible";
-                    return;
+                    return false;
                 }
                 if(url.value == "" && text.value == ""){
                     warning.style.visibility = "visible";
                     post2.style.visibility = "visible";
-                    return;
+                    return false;
                 }
+                this.type="submit"
             })
         </script>
     </body>

@@ -5,6 +5,10 @@
         <title>TechNews</title>        
     </head>
     <body>
+         <?php 
+            require_once('DB_Connection.php');
+            require('DB_Get.php');
+        ?>
         <div id="mainSec">
           
         <header>
@@ -21,15 +25,15 @@
         <div id="mainTime">
             <h1>Main Stories <time>10/18/2017</time></h1>
             <label>Sort By
-                <select name="" id="Sort">
+                <select name="" id="Sort" onchange="getSorted(this.value)">
                     <option value="1" >Newest</option>
-                    <option value="2"selected>Like</option>
-                    <option value="3">Comment</option>                
+                    <option value="2" selected>Like</option>
+                    <option value="3" >Comment</option>                
                 </select>
             </label>
         </div>        
         <ul class="newsPost">
-           
+            <?php get_News();?>
         </ul>
         <footer>
             <div>
@@ -42,6 +46,24 @@
             </div>
         </footer>
         </div>
-    <script src="mainScript.js"> </script>
+    <script> 
+        document.getElementsByTagName("body")[0].onload = function () {
+            var date = new Date();
+            var pageDate = document.getElementsByTagName("time")[0];
+            pageDate.innerText = (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
+        }
+        
+        function getSorted(sortBy) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementsByClassName("newsPost")[0].innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET","DB_Sort.php?sortBy="+sortBy,true);
+                xhttp.send();
+        }
+
+    </script>
     </body>
 </html>
