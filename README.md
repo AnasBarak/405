@@ -9,6 +9,11 @@ index:
   
   -Submit Page: https://anasbarak.github.io/405/submit.html
   
+Refrences used in Assignment 5:
+  - https://ide.c9.io/kalharbi/todo-php-mysql
+  - https://www.w3schools.com/PhP/php_ajax_database.asp
+  - https://gist.github.com/jboulhous/6007980
+
 Refrences used in Assignment 4:
   - https://stackoverflow.com/questions/25220486/xmlhttprequest-in-for-loop
   
